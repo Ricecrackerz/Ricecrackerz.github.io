@@ -143,6 +143,10 @@ p { margin: 0; max-width: var(--measure); }
 .projects .status.now { color: var(--accent); }
 .projects h3 { margin-bottom: 0.3rem; }
 .projects p { color: var(--fg-2); }
+.projects .title-link { color: var(--fg); text-decoration: none; }
+.projects .title-link span { color: var(--accent); font-size: 0.8em; }
+.projects .title-link:hover { color: var(--accent); }
+.projects p.live { margin-top: 0.5rem; font-size: 0.92rem; color: var(--fg-3); }
 .projects + .detail, .detail { margin-top: 2.4rem; }
 
 /* terminal: the one bold element */
@@ -389,8 +393,9 @@ A wider face puts more mass farther from the paddle's centerline. That raises tw
     <li class="glow">
       <div class="status now">Working v1, October 2026</div>
       <div>
-        <h3 id="paddle-pal">Paddle Pal</h3>
+        <h3 id="paddle-pal"><a class="title-link" href="https://paddle-pal.onrender.com/" target="_blank" rel="noopener">Paddle Pal <span aria-hidden="true">↗</span></a></h3>
         <p>Ask a question about a pickleball paddle. Claude picks one of six tools (a SQL lookup over a tester's measured specs, a side-by-side compare, a nearest-neighbour search, a cited search over knowledge pages I wrote) and answers only from what they return. When the sources don't cover it, it says so. A streaming chat page with saved chats, a player profile, daily question limits and an admin data upload sits on top.</p>
+        <p class="live"><a href="https://paddle-pal.onrender.com/" target="_blank" rel="noopener">paddle-pal.onrender.com</a> · live, in private testing. <a href="mailto:vincentyhoang@gmail.com?subject=Paddle%20Pal%20access">Email me</a> for the access password.</p>
       </div>
     </li>
     <li class="glow">
@@ -424,7 +429,7 @@ A wider face puts more mass farther from the paddle's centerline. That raises tw
         <li><b>Measured before it's kept.</b> Evals written before the code ran score tool choice, facts cited and honest "not covered" answers. Indexing page titles took direct retrieval from 8 to 12 of 15 at hit@1.</li>
         <li><b>The data owner's terms are code.</b> The tester's export never enters git, no table dumps, no affiliate columns, and he can upload his next export himself behind an admin account, with a preview of every change.</li>
       </ul>
-      <p class="small">Next: an invite-only hosted demo and a short demo video, both linked here. The repo goes public once the data owner signs off on showing his numbers.</p>
+      <p class="small">The hosted demo is live and invite-only (linked above); a short demo video is next. The repo goes public once the data owner signs off on showing his numbers.</p>
     </div>
     <div class="eval glow">
       <table>
